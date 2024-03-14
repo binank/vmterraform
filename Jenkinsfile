@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Build Infrastructure') {
             steps {
-                withAWS(credentials: '112') {
+                withAWS(credentials: 'aws-jenkins') {
                     sh 'terraform init'
                     sh 'terraform apply -auto-approve'
                 }
