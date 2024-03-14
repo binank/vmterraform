@@ -52,7 +52,7 @@ resource "aws_security_group" "public_sec" {
  #associate_public_ip_address = true
 #}
 resource "aws_instance" "ubuntu20-docker" {
-  ami = "ami-07d9b9ddc6cd8dd30"
+  ami = "ami-03bb6d83c60fc5f7c"
   instance_type = "t2.micro"
   key_name = "jenkins"
   user_data = file("Docker.sh")
