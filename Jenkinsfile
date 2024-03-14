@@ -1,12 +1,12 @@
 pipeline {
     agent any
     environment {
-        TF_VAR_credentials = credentials('112')
+        TF_VAR_credentials = credentials('aws-jenkins')
     }
     stages {
         stage('Destroy Infrastructure') {
             steps {
-                withAWS(credentials: '112') {
+                withAWS(credentials: 'aws-jenkins') {
                     //sh 'terraform init'
                     sh 'terraform destroy -auto-approve'
                 }
