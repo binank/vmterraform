@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        TF_VAR_credentials = credentials('112')
+        TF_VAR_credentials = credentials('aws-jenkins')
     }
     stages {
         stage('Checkout') {
