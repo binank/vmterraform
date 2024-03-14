@@ -52,9 +52,9 @@ resource "aws_security_group" "public_sec" {
  #associate_public_ip_address = true
 #}
 resource "aws_instance" "ubuntu20-docker" {
-  ami = "ami-0a7cf821b91bcccbc"
+  ami = "ami-07d9b9ddc6cd8dd30"
   instance_type = "t2.micro"
-  key_name = "vm"
+  key_name = "jenkins"
   user_data = file("Docker.sh")
  subnet_id = aws_subnet.public.id
  vpc_security_group_ids = [aws_security_group.public_sec.id]
